@@ -11,8 +11,5 @@ COPY ./models ./models
 COPY ./routes ./routes
 # Install dependencies
 RUN npm install 
-# ==== RUN =======
-# Set the env to "production"
-ENV NODE_ENV production
 LABEL developer=muratcansarkalkan
-RUN npm run build
+CMD ["node", "server.js"]
