@@ -15,4 +15,3 @@ RUN npm install
 # Set the env to "production"
 ENV NODE_ENV production
 LABEL developer=muratcansarkalkan
-RUN npm start
