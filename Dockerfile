@@ -12,6 +12,4 @@ COPY ./routes ./routes
 # Install dependencies
 RUN npm install 
 LABEL developer=muratcansarkalkan
-CMD ["node", "server.js"]
-
-# docker build . -f Dockerfile.bEnd -t stadiumwizardbend:0.0.1
+RUN npm start
