@@ -28,3 +28,4 @@ yarn-error.log*
 
 # dockersız
 Dockerfile
+.vercel
