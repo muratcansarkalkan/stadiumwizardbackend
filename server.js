@@ -29,14 +29,10 @@ connection.once('open', () => {
 })
 
 // Route connections
-const exercisesRouter = require('./routes/exercises');
 const leaguesRouter = require('./routes/leagues');
-const usersRouter = require('./routes/users');
 const stadiumsRouter = require('./routes/stadiums');
 const teamsRouter = require('./routes/teams');
 // Loads
-app.use('/exercises', exercisesRouter);
-app.use('/users', usersRouter);
 app.use('/leagues', leaguesRouter);
 app.use('/stadiums', stadiumsRouter);
 app.use('/teams', teamsRouter);
