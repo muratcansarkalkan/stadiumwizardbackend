@@ -25,10 +25,10 @@ router.route('/league=:League').get((req, res) => {
 });
 
 // Get all of the teams available with stadium data
-router.route('/stadiumdata/league=:League').get((req, res) => {
+router.route('/stadiumdata/country=:Country&league=:League').get((req, res) => {
   Team.aggregate([
       {$match:
-      {'League': req.params.League}
+      {'Country': req.params.Country, 'League': req.params.League}
       },
       { $lookup:
          {

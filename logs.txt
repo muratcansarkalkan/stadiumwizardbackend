@@ -1,0 +1,4 @@
+AUG 02 11:38:26.07
+404
+stadiumwizardbackend.vercel.app
+[GET] /teams/stadiumdata/league=Austrian%202.%20Class%20East/Central%20(N%C3%96)
