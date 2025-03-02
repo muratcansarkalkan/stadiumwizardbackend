@@ -19,7 +19,7 @@ router.route('/countries').get((req, res) => {
 // Get leagues of the country
 router.route('/country=:Country').get((req, res) => {
   var query = {"Country": req.params.Country};
-  League.find(query)
+  League.find(query).sort({ LeagueLevel: 1 })
     .then(leagues => res.json(leagues))
     .catch(err => res.status(400).json('Error: ' + err));
 });
