@@ -16,19 +16,19 @@ router.route('/country=:Country').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
-// Teams in a league
-router.route('/league=:League').get((req, res) => {
-  var query = {"League": req.params.League};
+// Teams in a competition
+router.route('/competition=:Competition').get((req, res) => {
+  var query = {"Competition": req.params.Competition};
   Team.find(query)
     .then(team => res.json(team))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
 // Get all of the teams available with stadium data
-router.route('/stadiumdata/country=:Country&league=:League').get((req, res) => {
+router.route('/stadiumdata/country=:Country&competition=:Competition').get((req, res) => {
   Team.aggregate([
       {$match:
-      {'Country': req.params.Country, 'League': req.params.League}
+      {'Country': req.params.Country, 'Competition': req.params.Competition}
       },
       { $lookup:
          {

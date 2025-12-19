@@ -34,4 +34,14 @@ router.route('/IDspecific/delete/:_id').get(authenticate, (req, res) => {
       .catch(err => res.status(400).json('Error while deleting: ' + err));
 });
 
+// Delete request to delete document with teamID
+router.route('/IDspecific/deletebyTeamId/:teamId').get(authenticate, (req, res) => {
+  var query = {"teamId": req.params.teamId};
+  Stadium.findOneAndDelete(query)
+    .then(
+      res.status(200).json({ message: 'Document deleted successfully' })
+    )
+    .catch(err => res.status(400).json('Error while deleting: ' + err));
+});
+
 module.exports = router;

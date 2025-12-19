@@ -15,7 +15,7 @@ const teamSchema = new Schema({
     Status: {
         type: String,
     },
-    League: {
+    Competition: {
         type: String,
     },
     
@@ -25,7 +25,7 @@ const teamSchema = new Schema({
     Reputation: {
         type: Number,
     },
-    LeagueLevel: {
+    CompetitionLevel: {
         type: Number,
     },
     Valid: {

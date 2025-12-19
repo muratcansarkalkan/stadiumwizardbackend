@@ -3,7 +3,7 @@ const cors = require('cors');
 // Connecting to MongoDB database
 const mongoose = require('mongoose');
 // Route connections
-const leaguesRouter = require('./routes/leagues');
+const competitionsRouter = require('./routes/competitions');
 const stadiumsRouter = require('./routes/stadiums');
 const teamsRouter = require('./routes/teams');
 const loginRouter = require('./routes/login'); 
@@ -47,7 +47,7 @@ connection.once('open', () => {
     console.log("MongoDB database connection established successfully");
 })
 // Loads
-app.use('/leagues', leaguesRouter);
+app.use('/competitions', competitionsRouter);
 app.use('/stadiums', stadiumsRouter);
 app.use('/teams', teamsRouter);
 app.use('/auth', loginRouter); // Mount the authentication routes
