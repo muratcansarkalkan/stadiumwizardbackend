@@ -5,8 +5,10 @@ You can view the [Stadium Wizard](https://github.com/muratcansarkalkan/stadiumwi
 
 ## How to run
 
-- Type "bodemon server.js" into terminal.
+- Type "nodemon server.js" into terminal.
 
 ## Changelog
 
-12/3/2023: Updated login system
+3/12/2023: Updated login system on frontend
+
+4/24/2026: Removed logs.txt
